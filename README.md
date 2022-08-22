@@ -1,17 +1,23 @@
 # useful-scripts-archive
+
 A collection of GNU/Linux (ba)sh scripts to do various things more easily.
 
 ## Genshin Impact auto ice-bridging
-This trick can be done directly in shell prompt using [Shell Parameter Expansion](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html). So, no file needed, only single dependency.
+
+Using [Shell Parameter Expansion](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html), you can perform this trick directly at the shell prompt. No additional files are needed, only a single dependency.
 
 * Dependency: [xdotool](https://command-not-found.com/xdotool)
 * Game-specific requirements:
-  * You have 5 seconds before first keypress;
-  * Genshin should be in focus within 5 seconds;
+  * Genshin should be in focus;
+  * You have 5 seconds before the first keypress;
   * Kaeya's Elemental Skill must be ready;
-  * Turn to water forward.
+  * Turn to the water source.
 
 Code:
 ```bash
 sleep 5 && while true; do xdotool key e sleep 1.5 keydown w sleep 1.3 keyup w sleep 3.75; done
 ```
+
+## Important note
+
+A lot of things here aren't bugless. If you have any questions or problems, you can always contact the author using the [Issues](https://github.com/PackmanDude/useful-scripts-archive/issues) or [Discussions](https://github.com/PackmanDude/useful-scripts-archive/discussions) sections. Contributions are welcome!

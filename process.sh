@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if [[ -z $1 ]]; then
-	echo 'provide an argument, for more detail look inside the code'
+if [[ ! $1 ]]; then
+	echo 'provide an argument, for more details look inside the code.'
 	exit 1
 fi
 

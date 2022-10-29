@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-if [[ ! $1 ]]; then
-	echo 'provide an argument, for more details look inside the code.'
-	exit 1
-fi
+set -e
+
+[ ! "$1" ] && echo "No argument supplied"; exit 1
 
 for i in "$1"; do ffmpeg -i "$i" -preset veryslow "${i%.*}-1.mp4"; done

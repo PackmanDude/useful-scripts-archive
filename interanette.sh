@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Interface to operate
 readonly INET=eno1 # may be ethN or wlanN in your case
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-[ ! "$1" ] && echo "Provide an argument with <video>.mp4"; exit 1
+[ ! "$1" ] && echo "No argument supplied"; exit 1
 
 for i in {1..100}
 do

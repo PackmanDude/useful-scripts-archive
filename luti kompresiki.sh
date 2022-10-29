@@ -4,8 +4,8 @@
 
 for i in {1..100}
 do
-	ffmpeg -i "$1" -preset veryslow -c:v libx264 -crf 63 -y "${1%%.*}"-sus.mp4
-	ffmpeg -i "${1%%.*}"-sus.mp4 -preset veryslow -c:v libx264 -crf 63 -y "$1"
+	ffmpeg -i "$1" -preset veryslow -c:v libx264 -crf 63 -y "${1%.*}"-sus.mp4
+	ffmpeg -i "${1%.*}"-sus.mp4 -preset veryslow -c:v libx264 -crf 63 -y "$1"
 done
 
-rm "${1%%.*}"-sus.mp4
+rm "${1%.*}"-sus.mp4

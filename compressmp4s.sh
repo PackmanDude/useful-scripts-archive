@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 [ ! "$1" ] && echo "No argument supplied"; exit 1
 
 for i in {1..100}

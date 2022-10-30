@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -xe
 
 [ ! "$1" ] && echo "No argument supplied"; exit 1
 

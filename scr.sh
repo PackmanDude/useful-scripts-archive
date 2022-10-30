@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -xe
 shopt -s globstar
 
 read -p "file type?: " ftype

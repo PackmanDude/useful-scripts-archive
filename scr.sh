@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-set -xe
+# Exit on error
+set -e
+# Include files starting with a dot
 shopt -s globstar
 
 read -p "file type?: " ftype

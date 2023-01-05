@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-set -xe
+# Exit on error
+set -e
 
-[ ! "$1" ] && echo "No argument supplied"; exit 1
+[ ! "$1" ] && echo "No argument passed"; exit 1
 
-for i in "$1"; do ffmpeg -i "$i" -preset veryslow "${i%.*}-1.mp4"; done
+for i in "$1"; do ffmpeg -i "$i" -c:v libx264 -preset veryslow -c:a copy "${i%.*}-1.${i##*.}"; done
